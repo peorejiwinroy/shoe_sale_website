@@ -1,0 +1,90 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Set a font */
+    line-height: 1.6; /* Set line height */
+    color: #ffffff; /* Text color */
+    background-image: url('info\ bg.jpg'); /* Add your background image here */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent background */
+    padding: 1rem;
+    text-align: center;
+}
+
+#navbar a {
+    color: white; /* White text for navbar links */
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* User Information Section Styles */
+.user-info {
+    padding: 50px 20px; /* Padding for user info section */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 8px; /* Rounded corners */
+    margin: 50px auto; /* Center section */
+    max-width: 600px; /* Max width for better appearance */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Center align heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Block-level label */
+    margin-bottom: 5px; /* Space below label */
+}
+
+input {
+    padding: 10px; /* Padding for input fields */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Max width for better appearance */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button Styles */
+.btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s; /* Transition effect */
+    display: block; /* Block element for centering */
+    margin: 20px auto; /* Center button */
+    width: 50%; /* Width of button */
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Footer Styles */
+#footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark footer */
+    color: white; /* White text color */
+    padding: 1rem;
+    text-align: center; /* Center align footer text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

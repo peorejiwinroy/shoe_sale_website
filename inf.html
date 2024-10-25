@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information - Shoe Store</title>
+    <link rel="stylesheet" href="inf.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <!-- User Information Section -->
+    <section class="user-info">
+        <h2>Enter Your Information</h2>
+        <form id="infoForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Shoe Size:</label>
+                <input type="text" id="size" name="size" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('infoForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                size: document.getElementById('size').value,
+                number: document.getElementById('number').value,
+                email: document.getElementById('email').value
+            };
+
+            // Send data to the server
+            try {
+                const response = await fetch('http://localhost:5000/api/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                alert(result.message);
+                // Redirect to another page after submission
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Submission failed!');
+            }
+        });
+
+        // Load components
+        loadHTML('navbar', 'navbar.html'); // Assuming navbar.html exists
+        loadHTML('footer', 'footer.html');
+    </script>
+
+</body>
+</html>

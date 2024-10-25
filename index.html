@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Shoe Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="include.js" defer></script> <!-- Include script for shared components -->
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Include Logo -->
+    <div id="logo"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Step into Comfort and Style</h1>
+            <p>Explore our exclusive range of stylish and comfortable shoes!</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <h2>About ShoeStore</h2>
+            <p>We are a leading online retailer of high-quality shoes, offering the latest styles at affordable prices.</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <p>Email: peoroy@shoestore.com</p>
+            <p>Phone: +91444333555</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 ShoeStore by PEO</p>
+        </div>
+    </section>
+
+    <script>
+        // Function to load external HTML into a specified element
+        function loadHTML(elementId, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Load components
+        loadHTML('navbar', 'navbar.html'); // Assuming navbar.html exists
+        loadHTML('logo', 'logo.html');
+        loadHTML('about', 'about.html');
+        loadHTML('contact', 'contact.html');
+        loadHTML('footer', 'footer.html');
+    </script>
+
+</body>
+</html>

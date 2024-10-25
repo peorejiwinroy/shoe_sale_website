@@ -1,0 +1,93 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a font */
+    line-height: 1.6; /* Set line height */
+    color: #ffffff; /* White text color */
+    background-image: url('bg1.jpg'); /* Add your background image here */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent background */
+    padding: 1rem;
+    text-align: center;
+}
+
+#navbar a {
+    color: white; /* White text for navbar links */
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 50px 20px; /* Padding for hero section */
+    text-align: center; /* Center text */
+    background: rgba(0, 0, 0, 0.7); /* Black background for hero section */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Font size for main title */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Font size for description */
+}
+
+/* Button Styles */
+.btn {
+    background-color: #060d06; /* Dark green background */
+    color: white; /* White text */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background 0.3s; /* Transition effect */
+    margin-top: 15px; /* Space between text and button */
+}
+
+.btn:hover {
+    background-color: #091e0a; /* Darker green on hover */
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px 20px; /* Padding for about section */
+    text-align: center; /* Center align text */
+    background: rgba(0, 0, 0, 0.8); /* Black background for about section */
+}
+
+.about h2 {
+    font-size: 2rem; /* Font size for section heading */
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 50px 20px; /* Padding for contact section */
+    text-align: center; /* Center align text */
+    background: rgba(0, 0, 0, 0.8); /* Black background for contact section */
+}
+
+.contact h2 {
+    font-size: 2rem; /* Font size for section heading */
+}
+
+/* Footer Styles */
+#footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker black background for footer */
+    color: white; /* White text color */
+    padding: 1rem;
+    text-align: center; /* Center align footer text */
+}
+
+.footer-content {
+    font-size: 1rem; /* Font size for footer text */
+}

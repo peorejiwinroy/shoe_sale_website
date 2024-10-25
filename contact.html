@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shoe Store</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:peoroy@shoestore.com">peoeoy@shoestore.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+91444222555">+9144465746</a></p>
+            <p><strong>Address:</strong> 123 Shoe Street, Fashion City, 12345</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="submit_contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="map">
+            <h3>Find Us Here</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.168477344827!2d-122.084!3d37.421998999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbaeb6de0480d%3A0xaad4b5db4a6c1bbf!2sShoe%20Store!5e0!3m2!1sen!2sus!4v1613670591256!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <p>Stay connected through our social media channels:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+</body>
+</html>

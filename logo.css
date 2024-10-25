@@ -1,0 +1,35 @@
+/* Navbar Styles */
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Dark background */
+    padding: 15px 20px; /* Padding around the navbar */
+}
+
+.logo {
+    color: #fff; /* White text color for the logo */
+    font-size: 24px; /* Font size for the logo */
+    font-weight: bold; /* Bold font for the logo */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 20px; /* Space between menu items */
+}
+
+li {
+    margin: 0; /* Remove default margin */
+}
+
+a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #f39c12; /* Change color on hover */
+}

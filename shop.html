@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Shoe Store</title>
+    <link rel="stylesheet" href="stylee.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Shoes Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="nike.jpg" alt="Shoe 1">
+                <h3>Nike Air Max</h3>
+                <p>₹120000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Nike Air Max', 120000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="addidas.jpg" alt="Shoe 2">
+                <h3>Adidas Ultraboost</h3>
+                <p>₹15000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Adidas Ultraboost', 15000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="puma.webp" alt="Shoe 3">
+                <h3>Puma Classic</h3>
+                <p>₹9000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Puma Classic', 9000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="rebbok.jpg" alt="Shoe 4">
+                <h3>Reebok Runner</h3>
+                <p>₹10000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Reebok Runner', 10000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="balance.avif" alt="Shoe 5">
+                <h3>New Balance 574</h3>
+                <p>₹11000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('New Balance 574', 11000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="assis.jpg" alt="Shoe 6">
+                <h3>Asics Gel-Kayano</h3>
+                <p>₹16000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Asics Gel-Kayano', 16000)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="converse.jpg" alt="Shoe 8">
+                <h3>Converse Chuck Taylor</h3>
+                <p>₹7500.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Converse Chuck Taylor', 7500)">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="pizza-site-frontpage-dribbble.png" alt="Shoe 14">
+                <h3>Air Jordan 1</h3>
+                <p>₹20000.00</p>
+                <a href="#" class="btn" onclick="openPurchaseForm('Air Jordan 1', 20000)">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Form Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePurchaseForm()">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price:</label>
+                    <input type="text" id="productPrice" name="productPrice" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="">Select Size</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to open the purchase form modal
+        function openPurchaseForm(productName, productPrice) {
+            document.getElementById('productName').value = productName;
+            document.getElementById('productPrice').value = '₹' + productPrice.toFixed(2);
+            document.getElementById('purchaseModal').style.display = 'block';
+        }
+
+        // Function to close the purchase form modal
+        function closePurchaseForm() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+
+        // Submit form action
+        document.getElementById('purchaseForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert('Purchase completed successfully!'); // Confirmation message
+            closePurchaseForm(); // Close the modal
+        });
+
+        // Load components
+        loadHTML('navbar', 'navbar.html'); // Assuming navbar.html exists
+        loadHTML('footer', 'footer.html');
+    </script>
+
+</body>
+</html>
